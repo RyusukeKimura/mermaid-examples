@@ -1,0 +1,12 @@
+stateDiagram-v2 
+  state "受付" as Accepted
+  state "確定" as Confirmed
+  state "中止" as Canceled
+  state "完了" as Completed
+
+  [*] --> Accepted
+  Accepted --> Confirmed: 承認
+  Accepted --> Canceled: 取消
+  Confirmed --> Completed: 実施
+  Completed --> [*] 
+  Canceled --> [*]

@@ -1,0 +1,9 @@
+sequenceDiagram
+  participant C as Client
+  participant A as API
+  C->>A: データ取得
+  alt 見つかった
+    A-->>C: 200 OK
+  else 見つからない
+    A-->>C: 404 Not Found
+  end

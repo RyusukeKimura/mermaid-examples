@@ -1,0 +1,9 @@
+gantt
+  dateFormat YYYY-MM-DD
+  axisFormat %m/%d
+  section 準備
+  設計 :done, a, 2026-10-05, 3d
+  section 実施
+  制作 :active, b, after a, 5d
+  確認 :crit, c, after b, 2d
+  公開 :milestone, after c, 0d

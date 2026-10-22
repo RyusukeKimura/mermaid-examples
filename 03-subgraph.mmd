@@ -1,0 +1,10 @@
+flowchart LR
+  subgraph Front[画面]
+    Web[Web]
+    App[アプリ]
+  end
+  subgraph Back[サーバー]
+    API[API] --> DB[(DB)]
+  end
+  Web --> API
+  App --> API
